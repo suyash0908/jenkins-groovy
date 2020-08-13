@@ -1,7 +1,7 @@
 job("j-job1"){
         description("this job will copy the file in you os version and push image to docker hub")
         scm {
-                 github('notarunkumar/autodockerfile' , 'master')
+                 github('notsuyash/autodockerfile' , 'master')
              }
         triggers {
                 scm("* * * * *")
@@ -73,13 +73,13 @@ fi''')
           attachBuildLog(true)
           subject('Build successfull')
           content('The build was successful and deployment was done.')
-          recipientList('ak999arunkumar@gmail.com')
+          recipientList('thakur2suyash@gmail.com')
         }
         failure{
           attachBuildLog(true)
           subject('Failed build')
           content('The build was failed')
-          recipientList('ak999arunkumar@gmail.com')
+          recipientList('thakur2suyash@gmail.com')
         }
       }
     }
